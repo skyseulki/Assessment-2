@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+    <h1>To Do List</h1>
+    <% if(todos.length) {%>
+        <% todos.forEach((t, i) => { %>
+        <li>
+            <%= t.todo %> - Not Done
+        </li>
+        <% }) %>
+    <% } else {%>
+    <h3>Nothing to do</h3>
+    <% } %>
+    
+    <hr><form action="/" method="POST">
+        <input type="text" name="todo">
+        <button type="submit">add to list</button>
+    </form></hr>
+    
+    </body>
+</html>
